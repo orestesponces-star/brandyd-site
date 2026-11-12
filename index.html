@@ -100,6 +100,9 @@ nav.main a:hover:after{right:0}
 .pc:hover .im img.a{transform:scale(1.04)}
 .pc .add{position:absolute;left:12px;right:12px;bottom:12px;background:#fff;padding:13px;border-radius:40px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;opacity:0;transform:translateY(8px);transition:.3s}
 .pc:hover .add{opacity:1;transform:none}
+.pc .add.soon{opacity:1;transform:none;text-align:center;pointer-events:none;background:rgba(255,255,255,.92)}
+.pc .soonp{letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:var(--mute)}
+.cartbtn{display:none!important}
 .pc .add:hover{background:var(--ink);color:#fff}
 .pc .br{margin-top:16px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500}
 .pc .t{margin-top:6px;font-size:14.5px;line-height:1.4;padding:0 6px}
@@ -258,7 +261,7 @@ body.menu .mnav{transform:none}
   <div class="in">
     <div class="big">BrandYD</div>
     <p>Global beauty brands. Now home in the U.S.</p>
-    <div class="row"><a href="#shop" class="btn light">Shop now</a><a href="#partner" class="btn light">Become a partner</a></div>
+    <div class="row"><a href="#shop" class="btn light">Explore</a><a href="#partner" class="btn light">Become a partner</a></div>
   </div>
 </section>
 
@@ -283,7 +286,7 @@ body.menu .mnav{transform:none}
     <span class="caps" style="color:var(--accent)">BYNETA · New in the U.S.</span>
     <h3 class="rv">Self Tanning<br>Transparent Spray</h3>
     <p class="rv">A clear, streak-free glow for face and body. Israel's cult self-tan, now shipping nationwide through BrandYD.</p>
-    <a href="#shop" data-f="BYNETA" class="btn solid rv">Shop now</a>
+    <a href="#shop" data-f="BYNETA" class="btn solid rv">Explore</a>
   </div>
 </section>
 
@@ -383,7 +386,7 @@ function render(){
   const list=filt==='All'?P:P.filter(p=>p.brand===filt);
   const rail=$('#rail');
   if(!list.length){rail.innerHTML=`<div class="pc" style="grid-column:1/-1"><div class="im" style="aspect-ratio:auto;padding:70px 20px;display:grid;place-items:center"><div><div class="caps" style="color:var(--accent)">${filt}</div><p style="margin:12px 0 18px;color:var(--mute)">Arriving in the U.S. soon. Be the first to know.</p><a class="link" href="#partner">Get notified</a></div></div></div>`;}
-  else rail.innerHTML=list.map(p=>`<div class="pc"><div class="im"><img class="a" loading="lazy" src="${p.img}&width=700" alt="${p.title}"><img class="b" loading="lazy" src="${p.img2}&width=700" alt=""><button class="add" data-i="${P.indexOf(p)}">Add to cart</button></div><div class="br">${p.brand}</div><div class="t">${p.title}</div><div class="p">${money(p.price)}</div></div>`).join('');
+  else rail.innerHTML=list.map(p=>`<div class="pc"><div class="im"><img class="a" loading="lazy" src="${p.img}&width=700" alt="${p.title}"><img class="b" loading="lazy" src="${p.img2}&width=700" alt=""><span class="add soon">Coming Soon</span></div><div class="br">${p.brand}</div><div class="t">${p.title}</div><div class="p soonp">Coming Soon</div></div>`).join('');
   rail.scrollLeft=0;bar();
 }
 P.forEach(p=>{['img','img2'].forEach(k=>{if(!p[k].includes('?'))p[k]+='?'})});
@@ -397,7 +400,7 @@ document.querySelectorAll('.mnav a').forEach(a=>a.addEventListener('click',()=>d
 render();
 // reels
 const R=[['170b6205608e4074a851fd612ff6645f.HD-1080p-7.2Mbps-54806337',1],['397b604332cd48d089f3a3c5e242404d.HD-1080p-7.2Mbps-66068121',2],['c0e454d967b041b4b619508df35a896c.HD-720p-1.6Mbps-33191981',3],['22665ca160e54cbda4ff8f4b130d7003.HD-1080p-2.5Mbps-65198003',0]];
-$('#reels').innerHTML=R.map(([v,i])=>{const id=v.split('.')[0],p=P[i];return `<div class="reel rv"><div class="v"><video data-src="https://byneta.com/cdn/shop/videos/c/vp/${id}/${v}.mp4?v=0" muted loop playsinline poster="https://byneta.com/cdn/shop/files/preview_images/${id}.thumbnail.0000000000_600x.jpg"></video></div><a class="chip" href="#shop" onclick="setF('BYNETA')"><img src="${p.img}&width=120" alt=""><div>${p.title}<small>${money(p.price)}</small></div></a></div>`}).join('');
+$('#reels').innerHTML=R.map(([v,i])=>{const id=v.split('.')[0],p=P[i];return `<div class="reel rv"><div class="v"><video data-src="https://byneta.com/cdn/shop/videos/c/vp/${id}/${v}.mp4?v=0" muted loop playsinline poster="https://byneta.com/cdn/shop/files/preview_images/${id}.thumbnail.0000000000_600x.jpg"></video></div><a class="chip" href="#shop" onclick="setF('BYNETA')"><img src="${p.img}&width=120" alt=""><div>${p.title}<small>Coming Soon</small></div></a></div>`}).join('');
 const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{})}else v.pause()}),{threshold:.25});
 document.querySelectorAll('#reels video').forEach(v=>vio.observe(v));
 // cart
