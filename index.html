@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BrandYD | Global Beauty Brands, Now in the U.S.</title>
+<meta name="description" content="BrandYD is the U.S. distributor and brand partner of Euphoria, BYNETA, Frouge and Ruby Rose. Shop the brands or become a retail partner.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#151515;--mute:#6f6a66;--line:#e8e3dd;--card:#f5f2ee;--beige:#efe7dd;--accent:#a8805f;--w:1440px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;color:var(--ink);background:#fff;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 32px}
+.caps{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:500}
+.btn{display:inline-block;text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:500;padding:15px 34px;border:1px solid currentColor;transition:.3s}
+.btn.solid{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.solid:hover{background:#fff;color:var(--ink)}
+.btn.light{color:#fff}.btn.light:hover{background:#fff;color:var(--ink)}
+.link{text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:3px}
+.h2{font-weight:400;font-size:clamp(24px,2.4vw,34px);text-align:center;letter-spacing:.01em}
+.sub{color:var(--mute);text-align:center;margin-top:8px;font-size:15px}
+section{position:relative;scroll-margin-top:112px}
+
+/* announcement */
+.ann{background:var(--beige);overflow:hidden;white-space:nowrap;font-size:12px;letter-spacing:.06em;height:34px;display:flex;align-items:center}
+.ann .track{display:inline-flex;gap:64px;animation:mq 38s linear infinite;padding-left:64px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.sc{box-shadow:0 4px 18px rgba(0,0,0,.05)}
+.hbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:68px}
+.hl,.hr{display:flex;gap:18px;align-items:center}.hr{justify-content:flex-end}
+.ico{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.4}
+.logo{font-weight:300;letter-spacing:.42em;font-size:22px;text-transform:uppercase;padding-left:.42em}
+.cartbtn{position:relative}
+.cartbtn i{position:absolute;top:-6px;right:-8px;background:var(--ink);color:#fff;font-style:normal;font-size:10px;width:17px;height:17px;border-radius:50%;display:grid;place-items:center}
+nav.main{display:flex;justify-content:center;gap:34px;height:44px;align-items:center}
+nav.main a{font-size:13px;letter-spacing:.04em;position:relative}
+nav.main a:after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:var(--ink);transition:.3s}
+nav.main a:hover:after{right:0}
+.menu-btn{display:none}
+
+/* hero */
+.hero{height:calc(100svh - 146px);min-height:520px;overflow:hidden;display:grid;place-items:center;color:#fff;text-align:center}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:kb 14s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero video.hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s}
+.hero video.hv.on{opacity:1}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.34),rgba(0,0,0,.12) 70%),linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.35))}
+.hero .in{position:relative;z-index:2}
+.hero .big{text-transform:uppercase;font-weight:300;font-size:clamp(46px,9vw,132px);letter-spacing:.32em;padding-left:.32em;line-height:1}
+.hero p{margin:22px 0 34px;font-size:clamp(14px,1.3vw,18px);letter-spacing:.08em}
+.hero .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* brands */
+.pad{padding:84px 0}
+.brands{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
+.bt{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:14px;color:#fff;display:flex;align-items:flex-end;justify-content:center;padding:28px}
+.bt img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.bt:hover img.bg{transform:scale(1.06)}
+.bt:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.55))}
+.bt .lab{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.bt .lg{height:34px;filter:brightness(0) invert(1)}
+.bt .lg.eu{height:58px}.bt .lg.fr{height:46px}
+.bt .word{font-size:28px;font-weight:300;letter-spacing:.2em;text-transform:uppercase}
+.tag{position:absolute;top:16px;left:16px;z-index:2;background:#fff;color:var(--ink);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:30px;font-weight:500}
+
+/* scrolling text */
+.scroll{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.scroll .track{display:inline-flex;gap:48px;animation:mq 30s linear infinite;font-size:clamp(28px,4vw,56px);font-weight:300;letter-spacing:.06em;text-transform:uppercase}
+.scroll .track span{display:inline-flex;align-items:center;gap:48px}
+.scroll .track span:after{content:"✦";font-size:.5em;color:var(--accent)}
+
+/* video split */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:82vh}
+.split .media{position:relative;overflow:hidden;background:#ddd}
+.split video,.split .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.split .txt{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 9%;gap:18px;background:#faf8f5}
+.split .txt h3{font-weight:400;font-size:clamp(24px,2.6vw,38px);letter-spacing:.06em;text-transform:uppercase;line-height:1.2}
+.split .txt p{color:var(--mute);max-width:440px;line-height:1.7}
+.split.rev .media{order:2}
+
+/* products */
+.tabs{display:flex;justify-content:center;gap:10px;margin:26px 0 34px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);padding:9px 20px;border-radius:40px;font-size:13px;letter-spacing:.04em;transition:.25s}
+.tabs button.on,.tabs button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*18px)/4);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+.rail::-webkit-scrollbar{display:none}
+.pc{scroll-snap-align:start;display:flex;flex-direction:column;text-align:center}
+.pc .im{position:relative;aspect-ratio:4/5;background:var(--card);border-radius:14px;overflow:hidden}
+.pc .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s,transform .8s}
+.pc .im img.b{opacity:0}
+.pc:hover .im img.b{opacity:1}
+.pc:hover .im img.a{transform:scale(1.04)}
+.pc .add{position:absolute;left:12px;right:12px;bottom:12px;background:#fff;padding:13px;border-radius:40px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;opacity:0;transform:translateY(8px);transition:.3s}
+.pc:hover .add{opacity:1;transform:none}
+.pc .add:hover{background:var(--ink);color:#fff}
+.pc .br{margin-top:16px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.pc .t{margin-top:6px;font-size:14.5px;line-height:1.4;padding:0 6px}
+.pc .p{margin-top:6px;font-size:14px;color:var(--mute)}
+.bar{height:2px;background:var(--line);margin-top:34px;position:relative;border-radius:2px}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--ink);width:25%;border-radius:2px;transition:left .15s}
+.railnav{display:flex;justify-content:center;gap:10px;margin-top:22px}
+.railnav button{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.railnav button:hover{border-color:var(--ink)}
+
+/* favorites */
+.favs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.fav{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;color:#fff;display:flex;align-items:flex-end;padding:36px}
+.fav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.fav:hover img{transform:scale(1.05)}
+.fav:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.5))}
+.fav .c{position:relative;z-index:2}
+.fav h4{font-weight:400;font-size:clamp(22px,2vw,30px);margin:6px 0 4px}
+.fav p{opacity:.88;margin-bottom:16px}
+
+/* features */
+.feats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.feat{padding:44px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.feat+.feat{border-left:1px solid var(--line)}
+.feat svg{width:34px;height:34px;stroke:var(--ink);fill:none;stroke-width:1.2;margin-bottom:6px}
+.feat b{font-weight:500;letter-spacing:.04em}
+.feat span{color:var(--mute);font-size:14px}
+
+/* reels */
+.reels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
+.reel{display:flex;flex-direction:column;gap:12px}
+.reel .v{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#e9e4de}
+.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel .chip{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:8px}
+.reel .chip img{width:46px;height:46px;border-radius:8px;object-fit:cover;background:var(--card)}
+.reel .chip div{font-size:13px;line-height:1.35;text-align:left}
+.reel .chip small{color:var(--mute);display:block}
+
+/* logos marquee */
+.logos{overflow:hidden;padding:46px 0;background:var(--beige)}
+.logos .track{display:inline-flex;align-items:center;gap:110px;animation:mq 34s linear infinite;padding-left:110px}
+.logos img{height:32px;width:auto;filter:brightness(0);opacity:.82}
+.logos img.eu{height:52px}.logos img.fr{height:44px}
+.logos .word{font-size:26px;font-weight:300;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap}
+
+/* partner form */
+.partner{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:80vh}
+.partner .media{position:relative;overflow:hidden}
+.partner .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.partner form{padding:80px 10%;display:flex;flex-direction:column;justify-content:center;gap:18px;background:#faf8f5}
+.partner h3{font-weight:400;font-size:clamp(26px,2.6vw,38px);line-height:1.2}
+.partner p{color:var(--mute);line-height:1.7;margin-bottom:8px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.partner input,.partner select,.partner textarea,.news input{width:100%;font:inherit;font-size:15px;padding:15px 18px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline:none;transition:border .2s}
+.partner input:focus,.partner select:focus,.partner textarea:focus,.news input:focus{border-color:var(--ink)}
+.partner textarea{min-height:110px;resize:vertical}
+.ok{display:none;color:#2e6b3f;font-size:14px}
+
+/* newsletter */
+.news{text-align:center}
+.news form{display:flex;gap:10px;max-width:520px;margin:28px auto 0}
+.news input{border-radius:40px}
+.news .btn{border-radius:40px;white-space:nowrap}
+
+/* footer */
+footer{background:var(--ink);color:#d9d4cf;padding:72px 0 34px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+footer .logo{color:#fff;padding-left:0}
+footer p{line-height:1.8;margin-top:18px;max-width:340px;color:#a9a39d}
+footer h5{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#fff;font-weight:500;margin-bottom:18px}
+footer li{list-style:none;margin-bottom:10px}
+footer li a:hover{color:#fff}
+.fbot{border-top:1px solid #2c2c2c;margin-top:54px;padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#8a847e;font-size:12px}
+
+/* drawer */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:.3s;z-index:80}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;z-index:90;transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column}
+body.cart .ov,body.menu .ov{opacity:1;pointer-events:auto}
+body.cart .drawer{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--line)}
+.ship{padding:16px 24px;font-size:13px;color:var(--mute)}
+.ship .pb{height:3px;background:var(--line);margin-top:10px;border-radius:3px;overflow:hidden}.ship .pb i{display:block;height:100%;background:var(--ink);width:0;transition:width .4s}
+.items{flex:1;overflow:auto;padding:0 24px}
+.it{display:grid;grid-template-columns:72px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:center}
+.it img{width:72px;height:88px;object-fit:cover;border-radius:8px;background:var(--card)}
+.it .t{font-size:14px;line-height:1.35}.it small{color:var(--accent);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.qty{display:flex;gap:10px;align-items:center;margin-top:8px;font-size:13px}
+.qty button{width:24px;height:24px;border:1px solid var(--line);border-radius:50%}
+.empty{text-align:center;color:var(--mute);padding:60px 0}
+.df{padding:22px 24px;border-top:1px solid var(--line)}
+.df .row{display:flex;justify-content:space-between;margin-bottom:16px;font-weight:500}
+.df .btn{width:100%;text-align:center;border-radius:40px}
+.mnav{position:fixed;top:0;left:0;bottom:0;width:min(360px,88%);background:#fff;z-index:90;transform:translateX(-100%);transition:transform .45s cubic-bezier(.2,.7,.2,1);padding:24px;display:flex;flex-direction:column;gap:6px}
+body.menu .mnav{transform:none}
+.mnav a{font-size:20px;padding:12px 0;border-bottom:1px solid var(--line)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);opacity:0;background:var(--ink);color:#fff;padding:13px 22px;border-radius:40px;font-size:13px;z-index:99;transition:.35s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  nav.main{display:none}.menu-btn{display:block}
+  .hero{height:calc(100svh - 102px)}
+  .brands{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rail{grid-auto-columns:calc((100% - 18px)/2.15)}
+  .feats{grid-template-columns:repeat(2,1fr)}.feat:nth-child(3){border-left:0}.feat:nth-child(n+3){border-top:1px solid var(--line)}
+  .reels{grid-template-columns:repeat(4,72%);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.reel{scroll-snap-align:start}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .wrap{padding:0 16px}.pad{padding:60px 0}
+  .logo{font-size:17px;letter-spacing:.32em}.hl .search{display:none}
+  .split,.partner{grid-template-columns:1fr}.split .media,.partner .media{min-height:70vh}.split.rev .media{order:0}
+  .favs{grid-template-columns:1fr}.fav{aspect-ratio:4/5;padding:24px}
+  .bt{padding:18px;border-radius:12px}.bt .lg{height:22px}.bt .lg.eu{height:40px}.bt .lg.fr{height:32px}.bt .word{font-size:18px}
+  .pc .add{opacity:1;transform:none;padding:10px;font-size:10px}
+  .f2{grid-template-columns:1fr}.news form{flex-direction:column}
+  .fgrid{grid-template-columns:1fr}.feat{padding:30px 12px}
+  .partner form{padding:56px 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="ann"><div class="track" id="annT"></div></div>
+
+<header id="hdr">
+  <div class="wrap">
+    <div class="hbar">
+      <div class="hl">
+        <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.add('menu')"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+        <button class="search" aria-label="Search"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+      </div>
+      <a href="#" class="logo">BrandYD</a>
+      <div class="hr">
+        <a href="#partner" aria-label="Account"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></a>
+        <button class="cartbtn" aria-label="Cart" onclick="openCart()"><svg class="ico" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><i id="cc">0</i></button>
+      </div>
+    </div>
+    <nav class="main">
+      <a href="#brands">Shop by Brand</a><a href="#shop">Bestsellers</a><a href="#shop" data-f="BYNETA">Makeup &amp; Tan</a><a href="#shop" data-f="Frouge">Men's Grooming</a><a href="#favs">Favorites</a><a href="#partner">Wholesale</a><a href="#partner">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mnav">
+  <button onclick="document.body.classList.remove('menu')" style="align-self:flex-end"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <a href="#brands">Shop by Brand</a><a href="#shop">Bestsellers</a><a href="#shop" data-f="BYNETA">Makeup &amp; Tan</a><a href="#shop" data-f="Frouge">Men's Grooming</a><a href="#favs">Favorites</a><a href="#partner">Wholesale</a><a href="#partner">Contact</a>
+</div>
+
+<section class="hero">
+  <img src="hero-frascos.jpg" alt="Beauty products on travertine">
+  <video class="hv" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg?v=2"><source src="hero.webm?v=2" type="webm"><source src="hero.mp4?v=2" type="mp4"></video>
+  <div class="in">
+    <div class="big">BrandYD</div>
+    <p>Global beauty brands. Now home in the U.S.</p>
+    <div class="row"><a href="#shop" class="btn light">Shop now</a><a href="#partner" class="btn light">Become a partner</a></div>
+  </div>
+</section>
+
+<section class="pad" id="brands">
+  <div class="wrap">
+    <h2 class="h2 rv">Shop by Brand</h2>
+    <p class="sub rv">Four houses, one trusted U.S. partner.</p>
+    <div class="brands">
+      <a class="bt rv" href="#shop" data-f="Euphoria"><img class="bg" src="still-gota.jpg" alt=""><span class="tag">Coming soon</span><div class="lab"><img class="lg eu" src="euphoria.svg" alt="Euphoria"><span class="link">Discover</span></div></a>
+      <a class="bt rv" href="#shop" data-f="BYNETA"><img class="bg" src="https://byneta.com/cdn/shop/files/Byneta_2025_2101.jpg?width=900" alt=""><div class="lab"><img class="lg" src="byneta.svg" alt="BYNETA"><span class="link">Shop BYNETA</span></div></a>
+      <a class="bt rv" href="#shop" data-f="Frouge"><img class="bg" src="https://cdn.shopify.com/s/files/1/0706/9850/0416/files/frouge-royal-full-set-web.jpg?width=900" alt=""><div class="lab"><img class="lg fr" src="frouge.svg" alt="Frouge"><span class="link">Shop Frouge</span></div></a>
+      <a class="bt rv" href="#partner"><img class="bg" src="hero-frascos.jpg" alt="" style="object-position:80% 50%"><span class="tag">Coming soon</span><div class="lab"><span class="word">Ruby Rose</span><span class="link">Discover</span></div></a>
+    </div>
+  </div>
+</section>
+
+<div class="scroll"><div class="track" id="scT"></div></div>
+
+<section class="split">
+  <div class="media"><video src="https://byneta.com/cdn/shop/videos/c/vp/3dfbec54b679460394ac86c2b6743445/3dfbec54b679460394ac86c2b6743445.HD-1080p-7.2Mbps-96362271.mp4?v=0" autoplay muted loop playsinline poster="https://byneta.com/cdn/shop/files/rn-image_picker_lib_temp_af809421-3097-4aa1-b235-06835a8007b8.jpg?width=1200"></video></div>
+  <div class="txt">
+    <span class="caps" style="color:var(--accent)">BYNETA · New in the U.S.</span>
+    <h3 class="rv">Self Tanning<br>Transparent Spray</h3>
+    <p class="rv">A clear, streak-free glow for face and body. Israel's cult self-tan, now shipping nationwide through BrandYD.</p>
+    <a href="#shop" data-f="BYNETA" class="btn solid rv">Shop now</a>
+  </div>
+</section>
+
+<section class="pad" id="shop">
+  <div class="wrap">
+    <h2 class="h2 rv">Our Bestsellers</h2>
+    <div class="tabs" id="tabs">
+      <button class="on" data-t="All">All</button><button data-t="BYNETA">BYNETA</button><button data-t="Frouge">Frouge</button><button data-t="Euphoria">Euphoria</button><button data-t="Ruby Rose">Ruby Rose</button>
+    </div>
+    <div class="rail" id="rail"></div>
+    <div class="bar"><i id="barI"></i></div>
+    <div class="railnav"><button aria-label="Previous" onclick="slide(-1)"><svg class="ico" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button><button aria-label="Next" onclick="slide(1)"><svg class="ico" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button></div>
+  </div>
+</section>
+
+<section class="pad" id="favs" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2 rv">Editor's Favorites</h2>
+    <div class="favs">
+      <a class="fav rv" href="#shop" data-f="Frouge"><img src="https://cdn.shopify.com/s/files/1/0706/9850/0416/files/new-product-tether-006-Edit-1536x1513_370cf30f-3cbc-465c-b468-0cd0925175c8.png?width=1400" alt="Frouge Royal Full Set"><div class="c"><span class="caps">Frouge</span><h4>The Royal Full Set</h4><p>The complete grooming ritual, boxed like a gift.</p><span class="link">Check now</span></div></a>
+      <a class="fav rv" href="#shop" data-f="BYNETA"><img src="https://byneta.com/cdn/shop/files/ByNeta2023_1779.jpg?width=1400" alt="BYNETA I'm Obsessed Lip Kit"><div class="c"><span class="caps">BYNETA</span><h4>I'm Obsessed! Lip Kit</h4><p>The perfect kit for a juicy, defined lip.</p><span class="link">Check now</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="feats">
+  <div class="feat rv"><svg viewBox="0 0 24 24"><path d="M2 7h12v9H2zM14 10h4l3 3v3h-7"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg><b>Free Shipping</b><span>On U.S. orders over $50</span></div>
+  <div class="feat rv"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><b>100% Authentic</b><span>Official U.S. distributor</span></div>
+  <div class="feat rv"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg><b>Easy Returns</b><span>Within 14 business days</span></div>
+  <div class="feat rv"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-7h6v7"/></svg><b>Wholesale</b><span>Accounts for retailers</span></div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <h2 class="h2 rv">Watch &amp; Shop</h2>
+    <p class="sub rv">Real routines with the brands we carry.</p>
+    <div class="reels" id="reels"></div>
+  </div>
+</section>
+
+<div class="logos"><div class="track" id="lgT"></div></div>
+
+<section class="partner" id="partner">
+  <div class="media"><img src="still-caja.jpg" alt="BrandYD gift box"></div>
+  <form id="pform" onsubmit="return sendForm(event)">
+    <span class="caps" style="color:var(--accent)">For brands &amp; retailers</span>
+    <h3>Bring your brand to America.<br>Or stock ours.</h3>
+    <p>BrandYD handles U.S. distribution, retail placement, e-commerce and fulfillment for international beauty houses. Tell us about you and we'll be in touch within 48 hours.</p>
+    <div class="f2"><input required placeholder="Full name" aria-label="Full name"><input required type="email" placeholder="Email" aria-label="Email"></div>
+    <div class="f2"><input placeholder="Company" aria-label="Company"><select aria-label="I am a"><option>I'm a retailer / store</option><option>I'm a brand</option><option>Press</option><option>Other</option></select></div>
+    <textarea placeholder="Tell us a little more" aria-label="Message"></textarea>
+    <div><button class="btn solid" style="border-radius:40px">Send inquiry</button></div>
+    <span class="ok" id="ok">Thank you. Our team will reach out shortly.</span>
+  </form>
+</section>
+
+<section class="pad news">
+  <div class="wrap">
+    <h2 class="h2 rv">Join the BrandYD List</h2>
+    <p class="sub rv">New brands, launches and members-only offers. No spam, ever.</p>
+    <form onsubmit="event.preventDefault();toast('You\'re on the list ✦');this.reset()"><input type="email" required placeholder="Your email" aria-label="Email"><button class="btn solid">Sign up</button></form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><span class="logo">BrandYD</span><p>The U.S. distributor and brand partner of Euphoria, BYNETA, Frouge and Ruby Rose. We bring the world's most-loved beauty brands to American shelves and screens.</p></div>
+      <div><h5>Shop</h5><ul><li><a href="#shop" data-f="BYNETA">BYNETA</a></li><li><a href="#shop" data-f="Frouge">Frouge</a></li><li><a href="#shop" data-f="Euphoria">Euphoria</a></li><li><a href="#shop" data-f="Ruby Rose">Ruby Rose</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="#partner">About BrandYD</a></li><li><a href="#partner">Wholesale</a></li><li><a href="#partner">Brand partnerships</a></li><li><a href="#partner">Contact</a></li></ul></div>
+      <div><h5>Help</h5><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="fbot"><span>© 2026 BrandYD. All rights reserved.</span><span>Florida, United States</span></div>
+  </div>
+</footer>
+
+<div class="ov" onclick="document.body.classList.remove('cart','menu')"></div>
+<aside class="drawer" aria-label="Cart">
+  <div class="dh"><span class="caps">Your cart (<span id="cc2">0</span>)</span><button onclick="document.body.classList.remove('cart')" aria-label="Close"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="ship"><span id="shipT">You're $50.00 away from free shipping</span><div class="pb"><i id="shipB"></i></div></div>
+  <div class="items" id="items"></div>
+  <div class="df"><div class="row"><span>Subtotal</span><span id="sub">$0.00</span></div><button class="btn solid" onclick="toast('Checkout opens when the Shopify store goes live')">Checkout</button></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+const P=[{"brand": "BYNETA", "title": "Self Tanning Spray – Face and Body 125ml", "price": "37.99", "img": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/SelfTanningSpray_Face_Body.jpg", "img2": "https://cdn.shopify.com/s/files/1/0580/9373/2003/products/ByNetaDay2_8355.jpg"}, {"brand": "BYNETA", "title": "Upgrade Mascara", "price": "17.99", "img": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/BYNETA-MASCARA2.png", "img2": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/ByNeta2023_1728.jpg"}, {"brand": "BYNETA", "title": "Control Freak Clay Wax Stick", "price": "19.99", "img": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/2_d32743da-e2bd-4a6e-a4c7-7c9bd06f667d.jpg", "img2": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/Byneta_2025_2993.jpg"}, {"brand": "BYNETA", "title": "I'm Obsessed! Lip Kit", "price": "32.99", "img": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/rn-image_picker_lib_temp_e602d11f-f8ed-4673-88d8-0b842aa6dff4.jpg", "img2": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/UntitledCapture6621.jpg"}, {"brand": "BYNETA", "title": "California Stick Blush", "price": "22.99", "img": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/aef0e71a8c6ab91bc64e949a8d1a9660.jpg", "img2": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/BynetaMUbyNZ0525.jpg"}, {"brand": "BYNETA", "title": "Sunset Palette – Eyeshadow Collection", "price": "24.99", "img": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/22-Aya-Wind_b21f355f-7fce-48c6-acea-92145bb01ded.jpg", "img2": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/SUNSETPALETTE-EYESHADOW.jpg"}, {"brand": "BYNETA", "title": "Body Glow Bronze", "price": "24.99", "img": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/a54154078f5c87601173b1b73aee6e41.jpg", "img2": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/07573Z5A1460copy.jpg"}, {"brand": "BYNETA", "title": "Self Tanning Application Mitt", "price": "8.99", "img": "https://cdn.shopify.com/s/files/1/0580/9373/2003/files/Glove_92cecb45-4bf5-45dc-a174-651cbc09878e.jpg", "img2": "https://cdn.shopify.com/s/files/1/0580/9373/2003/products/Glove_92cecb45-4bf5-45dc-a174-651cbc09876e.jpg"}, {"brand": "Frouge", "title": "Royal Full Set", "price": "170.00", "img": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/new-product-tether-006-Edit-1536x1513_370cf30f-3cbc-465c-b468-0cd0925175c8.png?v=1781730447", "img2": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/frouge-royal-full-set-web.jpg?v=1793541581"}, {"brand": "Frouge", "title": "Royal Body Oil", "price": "69.00", "img": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/ChatGPTImageSep7_2026_08_47_09PM.png?v=1788829968", "img2": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/ChatGPTImageSep7_2026_08_45_14PM.png?v=1788829968"}, {"brand": "Frouge", "title": "Royal Beard Oil", "price": "49.99", "img": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/BEARD_OIL_41764633-c2cd-46de-984a-60d5340f7061.png?v=1781661281", "img2": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/7_384056c3-9791-44d9-922a-b8ff7c557820.png?v=1781488364"}, {"brand": "Frouge", "title": "Head-to-Toe – Shampoo, Body Wash & Body Oil", "price": "69.99", "img": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/frouge-head-to-toe-web.jpg?v=1793493018", "img2": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/SHAMPOO_ae46263d-0dfa-4754-9f90-215cb2577265.png?v=1793326821"}, {"brand": "Frouge", "title": "Beard Case", "price": "89.99", "img": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/ChatGPT_Image_Jun_17_2026_01_58_01_PM_9a3b435d-b51c-456b-a0e7-73831acfa932.png?v=1781737174", "img2": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/BEARD_WASH_e990e51e-98ef-4d49-9008-741a0c923562.png?v=1781737102"}, {"brand": "Frouge", "title": "The Shower Duo – Body Wash & Shampoo", "price": "39.99", "img": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/frouge-shower-duo-web.jpg?v=1793493018", "img2": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/BODY_WASH_073fd586-6dc9-4855-b172-d848a7adae63.png?v=1793302425"}, {"brand": "Frouge", "title": "Face & Body Cream", "price": "29.00", "img": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/FACE_BODY_SOFTENING_CREAM.png?v=1781663347", "img2": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/42.jpg?v=1781740275"}, {"brand": "Frouge", "title": "Rose Loofah for 2", "price": "20.00", "img": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/ROSE_FOR_2.png?v=1781663528", "img2": "https://cdn.shopify.com/s/files/1/0706/9850/0416/files/ROSE_FOR_2.png?v=1781663528"}];
+const $=s=>document.querySelector(s);
+const money=n=>'$'+(+n).toFixed(2);
+// marquees
+const ann=Array(8).fill('<span>Free U.S. shipping on orders over $50</span><span>Official distributor of Euphoria · BYNETA · Frouge · Ruby Rose</span>').join('');$('#annT').innerHTML=ann+ann;
+const sc=Array(4).fill('<span>One partner</span><span>Four houses</span><span>Every shelf</span>').join('');$('#scT').innerHTML=sc+sc;
+const lg='<img class="eu" src="euphoria.svg" alt="Euphoria"><img src="byneta.svg" alt="BYNETA"><img class="fr" src="frouge.svg" alt="Frouge"><span class="word">Ruby Rose</span>';const lgs=Array(3).fill(lg).join('');$('#lgT').innerHTML=lgs+lgs;
+// products
+let filt='All';
+function render(){
+  const list=filt==='All'?P:P.filter(p=>p.brand===filt);
+  const rail=$('#rail');
+  if(!list.length){rail.innerHTML=`<div class="pc" style="grid-column:1/-1"><div class="im" style="aspect-ratio:auto;padding:70px 20px;display:grid;place-items:center"><div><div class="caps" style="color:var(--accent)">${filt}</div><p style="margin:12px 0 18px;color:var(--mute)">Arriving in the U.S. soon. Be the first to know.</p><a class="link" href="#partner">Get notified</a></div></div></div>`;}
+  else rail.innerHTML=list.map(p=>`<div class="pc"><div class="im"><img class="a" loading="lazy" src="${p.img}&width=700" alt="${p.title}"><img class="b" loading="lazy" src="${p.img2}&width=700" alt=""><button class="add" data-i="${P.indexOf(p)}">Add to cart</button></div><div class="br">${p.brand}</div><div class="t">${p.title}</div><div class="p">${money(p.price)}</div></div>`).join('');
+  rail.scrollLeft=0;bar();
+}
+P.forEach(p=>{['img','img2'].forEach(k=>{if(!p[k].includes('?'))p[k]+='?'})});
+function bar(){const r=$('#rail'),m=r.scrollWidth-r.clientWidth,w=Math.min(100,r.clientWidth/r.scrollWidth*100);$('#barI').style.width=w+'%';$('#barI').style.left=(m>0?r.scrollLeft/m*(100-w):0)+'%'}
+$('#rail').addEventListener('scroll',bar);addEventListener('resize',bar);
+function slide(d){const r=$('#rail');r.scrollBy({left:d*r.clientWidth*.75,behavior:'smooth'})}
+function setF(f){filt=f;document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===f));render()}
+$('#tabs').onclick=e=>{if(e.target.dataset.t)setF(e.target.dataset.t)};
+document.querySelectorAll('[data-f]').forEach(a=>a.addEventListener('click',()=>{setF(a.dataset.f);document.body.classList.remove('menu')}));
+document.querySelectorAll('.mnav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu')));
+render();
+// reels
+const R=[['170b6205608e4074a851fd612ff6645f.HD-1080p-7.2Mbps-54806337',1],['397b604332cd48d089f3a3c5e242404d.HD-1080p-7.2Mbps-66068121',2],['c0e454d967b041b4b619508df35a896c.HD-720p-1.6Mbps-33191981',3],['22665ca160e54cbda4ff8f4b130d7003.HD-1080p-2.5Mbps-65198003',0]];
+$('#reels').innerHTML=R.map(([v,i])=>{const id=v.split('.')[0],p=P[i];return `<div class="reel rv"><div class="v"><video data-src="https://byneta.com/cdn/shop/videos/c/vp/${id}/${v}.mp4?v=0" muted loop playsinline poster="https://byneta.com/cdn/shop/files/preview_images/${id}.thumbnail.0000000000_600x.jpg"></video></div><a class="chip" href="#shop" onclick="setF('BYNETA')"><img src="${p.img}&width=120" alt=""><div>${p.title}<small>${money(p.price)}</small></div></a></div>`}).join('');
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{})}else v.pause()}),{threshold:.25});
+document.querySelectorAll('#reels video').forEach(v=>vio.observe(v));
+// cart
+const cart=[];
+function openCart(){document.body.classList.add('cart')}
+document.addEventListener('click',e=>{const b=e.target.closest('.add');if(!b)return;const i=+b.dataset.i,f=cart.find(c=>c.i===i);f?f.q++:cart.push({i,q:1});drawCart();openCart()});
+function drawCart(){
+  const n=cart.reduce((a,c)=>a+c.q,0),s=cart.reduce((a,c)=>a+c.q*P[c.i].price,0);
+  $('#cc').textContent=$('#cc2').textContent=n;$('#sub').textContent=money(s);
+  const left=Math.max(0,50-s);$('#shipT').textContent=left?`You're ${money(left)} away from free shipping`:'You unlocked free shipping ✦';$('#shipB').style.width=Math.min(100,s/50*100)+'%';
+  $('#items').innerHTML=cart.length?cart.map((c,k)=>{const p=P[c.i];return `<div class="it"><img src="${p.img}&width=200" alt=""><div><small>${p.brand}</small><div class="t">${p.title}</div><div class="qty"><button onclick="q(${k},-1)">−</button>${c.q}<button onclick="q(${k},1)">+</button></div></div><div>${money(p.price*c.q)}</div></div>`}).join(''):'<div class="empty">Your cart is empty.</div>';
+}
+function q(k,d){cart[k].q+=d;if(cart[k].q<1)cart.splice(k,1);drawCart()}
+drawCart();
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('on'),2600)}
+function sendForm(e){e.preventDefault();$('#ok').style.display='block';e.target.reset();return false}
+// header + reveal
+const hv=$('.hv');if(hv){const on=()=>hv.classList.add('on');hv.readyState>2?on():hv.addEventListener('playing',on,{once:true});}
+addEventListener('scroll',()=>$('#hdr').classList.toggle('sc',scrollY>10),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
